@@ -7,11 +7,11 @@ import java.io.*;
 import java.util.ArrayList; 
 
 public class Final {
-  public static void main (String [] args) throws IOException { 
+  public static void main (String [] args) 
+         throws IOException { 
         
         /*String[] q1Choices = {"1.Saint Nick and Kris Kringle", "2.Santa Claus"}; 
         String[] q2Choices = {"1.Sandy", "2.Cupid"}; 
-
         Question q1 = new Question("What are two other names for Santa Claus?", 0, q1Choices); 
         Question q2 = new Question("One of Santa's reindeer shares a name with a famous symbol of Valentine's Day. Which Reindeer is that?", 1, q2Choices); 
         Question[] questions = new Question[]{q1, q2}; */
@@ -32,15 +32,15 @@ public class Final {
             if (isCorrectAnswer(q, userInput)) { //if the user chooses the correct answer 
                System.out.println("Hooray! You have entered the correct answer"); 
                score++; //score increments 
-               System.out.println(name + ", your Score is: " + score); //prints out score
             } else {
                System.out.println("You have entered the wrong answer"); 
                score--; //score decrements
                if(score < 0) { //so score does not go negative 
                   score = 0;
                }
-               System.out.println(name + ", your Score is: " + score); //prints out score 
+                
             } 
+            System.out.println(name + ", your Score is: " + score); //prints out score
          } 
          System.out.println("\n\n" + name + ", your Total Score is: " + score); //prints out score 
          System.out.println("\nThank you " + name + " for playing 12 Questions of Christmas!");  
@@ -73,7 +73,7 @@ public class Final {
   } //end of readQuestion method 
      
   public static boolean isCorrectAnswer (Question q, int userInput) { //determines if answer is correct or not 
-     if ( userInput == (q.getAnswer() + 1)) {
+     if (userInput == (q.getAnswer() + 1)) {
          return true; 
       } else {
          return false; 
