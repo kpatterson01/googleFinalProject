@@ -7,15 +7,7 @@ import java.io.*;
 import java.util.ArrayList; 
 
 public class Final {
-  public static void main (String [] args) throws IOException { 
-        
-        /*String[] q1Choices = {"1.Saint Nick and Kris Kringle", "2.Santa Claus"}; 
-        String[] q2Choices = {"1.Sandy", "2.Cupid"}; 
-
-        Question q1 = new Question("What are two other names for Santa Claus?", 0, q1Choices); 
-        Question q2 = new Question("One of Santa's reindeer shares a name with a famous symbol of Valentine's Day. Which Reindeer is that?", 1, q2Choices); 
-        Question[] questions = new Question[]{q1, q2}; */
-        
+  public static void main (String [] args) throws IOException {         
         Scanner in = new Scanner(System.in); 
  
         ArrayList<Question> read = readQuestions("questionAnswer.txt"); //readQuestions from text file 
