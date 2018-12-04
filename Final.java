@@ -20,7 +20,12 @@ public class Final {
         for (Question q : read) {
             System.out.println(q.getQuestion() + "\n" + Arrays.toString(q.getChoices()));
             int userInput = in.nextInt();
-
+            
+            if (userInput > 3) { //if user does not input right answer then the user can enter again
+               System.out.print("\nYou did not enter an option! Please choose again\n"); 
+               userInput = in.nextInt(); 
+            }
+            
             if (isCorrectAnswer(q, userInput)) { //if the user chooses the correct answer
                System.out.println("Hooray! You have entered the correct answer");
                score++; //score increments
